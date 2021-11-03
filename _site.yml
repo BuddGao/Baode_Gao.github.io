@@ -1,0 +1,16 @@
+name: "Yay internet!"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "CV"
+      href: ./documents/CV_Baode GAO.pdf
+    - text: "Dashboard"
+      href: dashboard.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<bg2715@cumc.columbia.edu>
+    - icon: fa-github fa-lg
+      href: https://github.com/BuddGao?tab=repositories
+output:
+  html_document:
+    theme: cosmo
