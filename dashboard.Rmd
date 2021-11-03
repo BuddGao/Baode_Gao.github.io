@@ -21,7 +21,7 @@ data(instacart)
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### The number of orders by the day of the week
+### The number of orders in different hours by the day of the week
 
 ```{r}
 instacart %>%
