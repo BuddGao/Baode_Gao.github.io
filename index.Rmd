@@ -7,26 +7,29 @@ output:
 
 ---
 
-#### MS student of Biostatistics
-#### Columbia University Mailman School of Public Health
+<link rel="stylesheet" href="academicons.css"/>
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+MS student of Biostatistics <br>
+Columbia University Mailman School of Public Health
+
+<br><center><img src="images/Baode_Gao.jpg" alt="baode" style="width:30%; length:33% border:10px solid"></center><br>
 
 
+### Research
+I have learned cure rate model by subgroup analysis. I also have worked to linear mixed model and contributed an article to a known ACM conference. Recently, I studied about graph neural network by self, implemented some classical models and had some new ideas. My current research interests are survival analysis and machine learning. I am looking for opportunities for summer research in 2022.
 
+### About
+I got my bachelor's degree in applied mathematics from [XJTLU](https://www.xjtlu.edu.cn/en/) in 2020. I am currently a first year MS student in Biostatistics, [Columbia University](https://www.columbia.edu/). I'm interested and enthusiastic to do further study on statistics and machine learning. And my goal is to become a professor in related fields. I'm looking for a 2023 Fall PhD position. [Here](documents/CV_Baode GAO.pdf) is my CV.
 
+<br>
 
-![](images/Baode_Gao.jpg){width=40%}
+### Contact Information
 
-links to other page.
-I can link to useful things like  [google](https://www.google.com/) and [p8105](https://www.p8105.com/making_websites.html)
+Baode Gao <br>
+[Department of Biostatistics](http://www.mailman.columbia.edu/academic-departments/biostatistics) <br>
+[Columbia Mailman School of Public Health](http://www.mailman.columbia.edu/) <br>
+100 Haven Ave <br>
+New York, New York 10032 <br>
 
-I can make an extra page on my site and link to that.
-Here's my [about](about.html)
-
-## Here's Ted
-
-Ted likes to be on the internet. Here he is:
-
-<img src="images/Ted.jpg" style="width:75%">
-![](images/Ted.jpg)
-
-e.g. [p8105](https://github.com/P8105/p8105.github.io)
+Email: [bg2715@columbia.edu](mailto:bg2715@cumc.columbia.edu) 
