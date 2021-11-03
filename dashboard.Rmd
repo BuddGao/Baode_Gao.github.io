@@ -1,0 +1,72 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source_code: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r}
+data(instacart)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### The number of orders by the day of the week
+
+```{r}
+instacart %>%
+  janitor::clean_names() %>%
+  mutate(order_dow = factor(order_dow),
+    order_dow = fct_relevel(order_dow),
+    order_dow = recode(order_dow, "0" = "Sun",
+                       "1" = "Mon","2" = "Tue",
+                       "3" = "Wed", "4" = "Thur", 
+                       "5" = "Fri", "6" = "Sat")
+  ) %>%
+  group_by(order_dow, order_hour_of_day) %>%
+  summarise(n_orders = n()) %>%
+    plot_ly(y = ~n_orders, color = ~order_dow, type = "box", colors = "viridis") 
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### The number of orders difference by aisle
+
+```{r}
+instacart %>%
+  janitor::clean_names() %>%
+  count(aisle) %>%
+  filter(n > 10000) %>%
+  mutate(aisle = factor(aisle),
+         aisle = fct_reorder(aisle, n)) %>% 
+  plot_ly(x = ~aisle, y = ~n, color = ~aisle, type = "bar", colors = "viridis") %>% 
+  layout(yaxis = list(title = "n_orders"))
+```
+
+### The number of orders in top 10 departments by hours in a day.
+
+```{r}
+hour_dep_df = instacart %>%
+  janitor::clean_names() %>%
+  filter(department %in% c("beverages","dairy eggs","dry goods pasta",
+                           "frozen","produce","snacks","pantry",
+                           "bakery","canned goods","deli")) %>%
+  group_by(department,order_hour_of_day) %>%
+  summarise(n_orders = n()) %>% 
+  ggplot(aes(x = order_hour_of_day, y = n_orders, color = department)) + 
+  geom_line() 
+  
+ggplotly(hour_dep_df) 
+```
